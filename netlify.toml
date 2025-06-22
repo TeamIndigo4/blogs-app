@@ -1,0 +1,5 @@
+# netlify.toml (place in root folder, NOT in client/)
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+  base = "client"
