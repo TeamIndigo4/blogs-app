@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 max-w-4xl mx-auto space-y-4">
+  <div class="py-6 h-full overflow-auto w-[88%] mx-auto space-y-4 no-scrollbar">
     <!-- Title -->
     <InputField v-model="title" placeholder="Enter blog title..." />
 
@@ -10,12 +10,7 @@
     <BlogEditor v-model="content" />
 
     <!-- Submit -->
-    <button
-      class="mt-4 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
-      @click="submitBlog"
-    >
-      Publish Blog
-    </button>
+    <BaseButton size="md" text="Publish" variant="primary" @click="submitBlog" />
   </div>
 </template>
 
@@ -24,12 +19,14 @@ import InputField from "../../components/form_components/InputField.vue";
 import Dropdown from "../../components/form_components/Dropdown.vue";
 import BlogEditor from "../../components/blogs_component/BlogEditor.vue";
 import { parseHtmlToBlocks } from "../../utils/htmlToVue";
+import BaseButton from '../../components/form_components/BaseButton.vue';
 
 export default {
   components: {
     InputField,
     Dropdown,
     BlogEditor,
+    BaseButton,
   },
   data() {
     return {

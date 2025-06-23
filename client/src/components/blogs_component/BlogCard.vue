@@ -1,4 +1,5 @@
 <script>
+import BaseButton from "../form_components/BaseButton.vue"
 export default {
   name: "BlogCard",
   props: {
@@ -6,6 +7,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  components:{
+    BaseButton
   },
 
   methods: {
@@ -43,7 +47,7 @@ export default {
 </script>
 
 <template>
-  <div class="max-w-[19.5rem] bg-[#333] rounded-xl shadow-md overflow-hidden">
+  <div class="max-w-[20rem] bg-white dark:bg-[#333] rounded-xl shadow-sm overflow-hidden">
     <!-- Image -->
     <img
       src="../../assets/blog_bg.jpg"
@@ -59,40 +63,21 @@ export default {
         >{{ getCategoryValue(blog.category) }}</span
       >
 
-      <h2 class="mt-3 text-xl font-bold text-white">{{ blog.title }}</h2>
-      <p class="mt-1 text-sm text-[#ccc] leading-snug">
+      <h2 class="mt-3 text-xl font-bold text-[#222] dark:text-white">{{ blog.title }}</h2>
+      <p class="mt-1 text-sm text-[#969696] dark:text-[#ccc]">
         {{ blog.content }}
       </p>
 
       <!-- Footer -->
       <div class="mt-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <!-- <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            alt="author"
-            class="w-8 h-8 rounded-full"
-          /> -->
           <div class="text-sm">
-            <p class="text-[#eee] font-medium">Published At</p>
-            <p class="text-gray-500 text-xs">{{ blog.createdAt }}</p>
+            <p class="text-[#333] dark:text-[#eee] font-medium">Published At</p>
+            <p class="text-[#969696] dark:text-gray-500 text-sm">{{ blog.createdAt }}</p>
           </div>
         </div>
 
-        <a href="#" class="text-gray-400 hover:text-black">
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </a>
+        <BaseButton text="Read" size="md" variant="primary" />
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <!-- Dropdown Trigger Button -->
     <button
       @click="toggleDropdown"
-      class="w-full px-4 py-2.5 bg-[#464646] text-white rounded-lg shadow text-left placeholder:text-[#eee] text-sm"
+      class="w-full px-4 py-2.5 bg-[#fcfcfc] dark:bg-[#464646] text-secondary dark:text-white rounded-lg shadow-sm text-left placeholder:text-[#eee] text-sm"
     >
       {{ selectedLabel }}
       <span class="float-right" v-if="isOpen">▲</span>

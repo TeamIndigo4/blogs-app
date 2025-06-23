@@ -26,6 +26,15 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #aaa;
 }
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 </style>
 
 

@@ -1,9 +1,8 @@
-<!-- src/components/form_components/InputField.vue -->
 <template>
   <input
     :placeholder="placeholder"
     v-model="inputValue"
-    class="w-full px-4 py-2 rounded-md bg-[#464646] text-white placeholder:text-[#ccc] outline-none"
+    class="w-full px-4 py-2 rounded-md text-secondary placeholder:text-[#bababa] dark:bg-[#464646] dark:text-white dark:placeholder:text-[#ccc] outline-none"
   />
 </template>
 

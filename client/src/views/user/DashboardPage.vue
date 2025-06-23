@@ -22,11 +22,11 @@ export default {
     };
   },
 
-  computed:{
-    blogs(){
-        return this.$store.getters.getBlogs;
-    }
-  }
+  computed: {
+    blogs() {
+      return this.$store.getters.getBlogs;
+    },
+  },
 };
 </script>
 
@@ -55,7 +55,9 @@ export default {
     <header
       class="flex justify-between items-center sticky top-0 z-10 bg-[#222] py-4"
     >
-      <h2 class="text-white font-semibold text-xl">All Blogs ({{ blogs.length }})</h2>
+      <h2 class="text-white font-semibold text-xl">
+        All Blogs ({{ blogs.length }})
+      </h2>
       <!-- Tools section -->
       <div class="hidden md:flex items-center gap-x-3">
         <Searchbox />
