@@ -1,5 +1,5 @@
 <template>
-  <div class="relative inline-block w-56">
+  <div class="relative inline-block w-full">
     <!-- Dropdown Trigger Button -->
     <button
       @click="toggleDropdown"
